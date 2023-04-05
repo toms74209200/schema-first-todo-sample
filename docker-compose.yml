@@ -18,6 +18,15 @@ services:
       - SPEC_URL=reference/schema-first-todo-sample.yaml
       - OUTPUT=/workspace/spec-server/index.html
     command: bash -c "npx @redocly/cli build-docs $${SPEC_URL} --output=$${OUTPUT}"
+  server-dev:
+    image: mcr.microsoft.com/devcontainers/java:0-17-bullseye
+    volumes:
+      - .:/workspaces
+      - ./reference/schema-first-todo-sample.yaml:/workspaces/todo-server/src/main/resources/spec/schema-first-todo-sample.yaml
+      - maven_cache:/home/vscode/.m2
+    working_dir: /workspaces
+    command: /bin/sh -c "while sleep 1000; do :; done"
 
 volumes:
   node_modules_cache:
+  maven_cache:
