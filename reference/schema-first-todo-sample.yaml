@@ -10,6 +10,7 @@ info:
   description: TODO application Web API sample using by OpenAPI Specification
   license:
     name: MIT
+    identifier: MIT
     url: 'https://raw.githubusercontent.com/toms74209200/schema-first-todo-sample/3bd8959fcf6b0e2601bbe11f3a2803898ea84d24/LICENSE'
 servers:
   - url: 'http://localhost:8080'
