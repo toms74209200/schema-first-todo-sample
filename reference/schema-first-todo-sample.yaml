@@ -171,7 +171,7 @@ components:
         token:
           type: string
           description: JWTトークン
-          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
     Task:
       type: object
       properties:
@@ -282,9 +282,7 @@ components:
       content:
         application/json:
           schema:
-            type: object
-            properties:
-              $ref: '#/components/schemas/Token'
+            $ref: '#/components/schemas/Token'
     postTasksResponse:
       description: 新しいタスクが作成されました
       content:
