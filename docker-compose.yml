@@ -1,0 +1,23 @@
+services:
+  redoc:
+    image: redocly/redoc
+    volumes:
+      - ./reference:/usr/share/nginx/html/reference
+    ports:
+      - 80:80
+    environment:
+      - SPEC_URL=reference/schema-first-todo-sample.yaml
+  redocly-cli:
+    image: node:18-bullseye
+    volumes:
+      - node_modules_cache:/workspace/node_modules
+      - ./reference:/workspace/reference
+      - ./spec-server:/workspace/spec-server
+    working_dir: /workspace
+    environment:
+      - SPEC_URL=reference/schema-first-todo-sample.yaml
+      - OUTPUT=/workspace/spec-server/index.html
+    command: bash -c "npx @redocly/cli build-docs $${SPEC_URL} --output=$${OUTPUT}"
+
+volumes:
+  node_modules_cache:
