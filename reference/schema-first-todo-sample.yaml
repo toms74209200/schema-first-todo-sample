@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.0.3
 x-stoplight:
   id: 9ymw12wrbmtwm
 info:
@@ -10,7 +10,6 @@ info:
   description: TODO application Web API sample using by OpenAPI Specification
   license:
     name: MIT
-    identifier: MIT
     url: 'https://raw.githubusercontent.com/toms74209200/schema-first-todo-sample/3bd8959fcf6b0e2601bbe11f3a2803898ea84d24/LICENSE'
 servers:
   - url: 'http://localhost:8080'
@@ -163,8 +162,9 @@ components:
       required:
         - email
         - password
-      examples:
-        - email: user@example.com
+      x-examples:
+        Example 1:
+          email: user@example.com
           password: password0123!?
     Token:
       type: object
@@ -172,7 +172,7 @@ components:
         token:
           type: string
           description: JWTトークン
-          example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
     Task:
       type: object
       properties:
