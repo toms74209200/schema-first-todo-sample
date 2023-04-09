@@ -178,6 +178,7 @@
                             <generatorName>spring</generatorName>
                             <configOptions>
                                 <sourceFolder>src/main/java</sourceFolder>
+                                <groupId>io.github.toms74209200</groupId>
                                 <artifactId>schema-first-todo-server</artifactId>
                                 <basePackage>io.github.toms74209200</basePackage>
                                 <apiPackage>io.github.toms74209200.api</apiPackage>
