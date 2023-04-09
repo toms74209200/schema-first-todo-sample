@@ -275,9 +275,6 @@ components:
                 type: integer
                 format: int64
                 description: ユーザーの一意な識別子
-              username:
-                type: string
-                description: ユーザーの名前
     postAuthResponse:
       description: 認証されたユーザーのトークンが返されます
       content:
