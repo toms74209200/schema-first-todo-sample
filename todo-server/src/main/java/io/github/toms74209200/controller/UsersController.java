@@ -11,11 +11,11 @@ import java.net.URI;
 import java.util.Optional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 
 @Slf4j
-@Controller
+@RestController
 public class UsersController implements UsersApi {
 
     private static final String API_PATH = "/users";
